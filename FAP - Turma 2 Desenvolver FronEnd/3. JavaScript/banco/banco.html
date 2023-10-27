@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ContaEmBanco</title>
+</head>
+
+<body>
+    <h1>ContaEmBanco</h1>
+
+    <script>
+        function banco(conta, saldo, tipoDeConta, agencia) {
+            this.conta = conta;
+            this.saldo = saldo;
+            this.tipoDeConta = tipoDeConta;
+            this.agencia = agencia;
+        }
+        banco.prototype.buscarSaldo = function () {
+            return alert(`Seu saldo Atual é:R$${this.saldo}`) 
+        }
+
+        banco.prototype.deposito = function (valor) {
+            return alert(`Seu saldo Atual é:R$${this.saldo += valor}`)
+        }
+        banco.prototype.saque = function (valor) {
+            return alert(`Seu saldo Atual é:R$${this.saldo -= valor}`)
+        }
+        banco.prototype.numconta = function () {
+            return alert(`O número da sua conta é:${this.conta}`)
+        }
+
+
+        var minhaConta = new banco(18333, 10000, 'poupanca', 5030);
+        minhaConta.buscarSaldo()
+        minhaConta.deposito(1.000)
+        minhaConta.saque(500)
+        minhaConta.numconta()
+
+    </script>
+</body>
+
+</html>
