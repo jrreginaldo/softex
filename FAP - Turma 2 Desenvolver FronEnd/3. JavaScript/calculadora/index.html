@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular 02 Valores</title>
+</head>
+<body>
+    <h1>Calcular 02 Valores</h1>
+    <div id="res"></div>
+    <script>
+        let num1 = Number(prompt('Digite o Primeiro Número:'));
+        let num2 = Number(prompt('Digite o Segundo Número:'));
+        let operador = prompt('Escolha um Operador: 1 Somar (+) , 2 Subtrair (-), 3 Multiplicar (*), 4 Divisão (/)')
+        let res = document.getElementById('res');
+
+      switch(operador){
+        case '1':
+        res.innerHTML = `A soma de ${num1} e ${num2} é = ${num1+num2} `
+        break
+        case '2':
+        res.innerHTML = `A diferença de ${num1} e ${num2} é = ${num1-num2} `
+        break
+        case '3':num1res.innerHTML = `A multiplicação de ${num1} e ${num2} é = ${num1*num2} `
+        break
+        case '4':
+        res.innerHTML = `A divisão de ${num1} e ${num2} é = ${num1/num2} e o resto da divisão é: ${num1%num2} `
+
+      }
+
+    </script>
+</body>
+</html>
